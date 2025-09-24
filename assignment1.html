@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bus Booking System</title>
+</head>
+<body>
+
+<!-- main table, centered without CSS -->
+<table border="1" width="800" cellpadding="10" cellspacing="0" align="center">
+  <!-- NAVBAR (colored) -->
+  <tr bgcolor="green color">
+    <td colspan="2">
+      <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="60" align="left" valign="middle">
+            <!-- ABES logo -->
+            <img src="abslogo.png" alt="ABES Logo" width="40" height="40">
+          </td>
+          <td align="center" valign="middle">
+            <font color="white"><b>Seat Book</b></font>
+          </td>
+          <td width="80" align="right" valign="middle">
+           
+            <img src="bus.jpg" alt="Bus" width="60" height="40">
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  
+  <tr>
+    <td colspan="2" align="center">
+      <b>* Welcome to Bus Booking System *</b>
+    </td>
+  </tr>
+
+ 
+  <tr>
+    <td colspan="2"><b>User Detail</b></td>
+  </tr>
+
+
+  <tr>
+    <td width="250">User Name</td>
+    <td><input type="text" name="username" size="40"></td>
+  </tr>
+
+  <tr>
+    <td>User Gender</td>
+    <td>
+      <label><input type="radio" name="gender" value="male"> Male</label><br>
+      <label><input type="radio" name="gender" value="female"> Female</label>
+    </td>
+  </tr>
+
+  <tr>
+    <td>User Select City</td>
+    <td>
+      <select name="city">
+        <option>Select City</option>
+        <option>Delhi</option>
+        <option>Noida</option>
+        <option>Ghaziabad</option>
+        <option>Lucknow</option>
+        <option>Kanpur</option>
+      </select>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Select Your Seat</td>
+    <td>
+      <label><input type="radio" name="seatType" value="AC"> AC</label><br>
+      <label><input type="radio" name="seatType" value="Non-AC"> Non-AC</label>
+    </td>
+  </tr>
+
+  
+  <tr>
+    <td colspan="2" align="left">
+      <button type="button">Book bus service</button>
+    </td>
+  </tr>
+</table>
+
+
+</body>
+</html>

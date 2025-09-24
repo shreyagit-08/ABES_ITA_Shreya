@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Two Multiplication Tables</title>
+</head>
+<body>
+  <h2>Two Multiplication Tables</h2>
+  <script>
+    let num1 = 5;
+    let num2 = 7;
+    let limit = 10;
+
+    function printTable(num) {
+      document.write("<h3>Multiplication Table of " + num + "</h3>");
+      let evenNumbers = [];
+      let oddNumbers = [];
+      for (let i = 1; i <= limit; i++) {
+        let result = num * i;
+        document.write(num + " × " + i + " = " + result + "<br>");
+
+        if (result % 2 === 0) {
+          evenNumbers.push(result);
+        } else {
+          oddNumbers.push(result);
+        }
+      }
+ 
+      document.write("<b>Even Numbers:</b> " + evenNumbers.join(", ") + "<br>");
+      document.write("<b>Odd Numbers:</b> " + oddNumbers.join(", ") + "<br><br>");
+    }
+    printTable(num1);
+    printTable(num2);
+  </script>
+</body>
+</html>

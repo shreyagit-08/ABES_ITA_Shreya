@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <p>Fill your details below:</p>
+
+    <form>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td><input type="number" name="age" required></td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="tel" name="phone" required></td>
+            </tr>
+            <tr>
+                <td>Course:</td>
+                <td>
+                    <select name="course" required>
+                        <option value="a">Course A</option>
+                        <option value="b">Course B</option>
+                        <option value="c">Course C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Hobbies:</td>
+                <td>
+                    <input type="checkbox" name="hobby" value="h1"> H1
+                    <input type="checkbox" name="hobby" value="h2"> H2
+                    <input type="checkbox" name="hobby" value="h3"> H3
+                    <input type="checkbox" name="hobby" value="h4"> H4
+                </td>
+            </tr>
+            <tr>
+                <td>Temporary Password:</td>
+                <td><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td>Domain Section:</td>
+                <td>
+                    <select name="domain" required>
+                        <option value="aiml">DS&AIML</option>
+                        <option value="cloud">CLOUD COMPUTING</option>
+                        <option value="cyber">CYBER SECURITY</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date" name="dob" required></td>
+            </tr>
+            <tr>
+                <td>Upload Result:</td>
+                <td><input type="file" name="result"></td>
+            </tr>
+            <tr>
+                <td>Remarks:</td>
+                <td><textarea name="remarks" rows="4" cols="30"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

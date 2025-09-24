@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        body{
+            display:flex;
+           justify-content:center;
+           align-items:center;
+           height:100vh;
+           margin:0;
+
+        }
+        
+
+        .app{
+            width:300px;
+            height:300px;
+            margin:50 px auto;
+            border:2px solid black;
+            text-align:center;
+            padding: 20px;
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div class="app">
+        <h2>COUNTER APP</h2>
+        <div class="count"id="num">0</div>
+        <button onclick="change(1)">+</button>
+        <button onclick="change(-1)">-</button>
+    </div>
+    <script>
+        let count=0;
+        function change(val){
+            let temp= count+val;
+            if(temp>10){
+                alert("Max Limit");
+            }
+            else if(temp<0){
+                alert("Min Limit");
+            }
+            else{
+                count=temp;
+            
+            document.getElementById("num").innerText=count;
+        }}
+    </script>
+    
+</body>
+</html>

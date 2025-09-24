@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ABES Engineering College</title>
+</head>
+<body>
+
+<!-- Top section -->
+<div align="center">
+  <img src="abslogo.png" alt="College Logo" width="220" height="250"><br>
+  <h1>ABES Engineering College</h1>
+  <p><b>Thought of the Day:</b> Knowledge is Power</p>
+</div>
+<hr>
+
+<!-- Navigation menu -->
+<div align="center">
+  <a href="about.html" target="contentFrame">About Us</a> |
+  <a href="academic.html" target="contentFrame">Academic</a> |
+  <a href="placement.html" target="contentFrame">Placement</a> |
+  <a href="gallery.html" target="contentFrame">Gallery</a> |
+  <a href="enquiry.html" target="contentFrame">Enquiry Form</a> |
+  <a href="registration.html" target="contentFrame">Registration Form</a>
+</div>
+
+<hr>
+
+<!-- Bottom iframe (content area) -->
+<iframe name="contentFrame" width="100%" height="500px"></iframe>
+
+<!-- Inline "pages" for iframe -->
+<!-- About Us -->
+<template id="about">
+  <h2>About Us</h2>
+  <p>Welcome to ABES Engineering College. We provide quality education in engineering, management, and computer applications.</p>
+  <h3>Courses Offered</h3>
+  <ul>
+    <li>B.Tech
+      <ul>
+        <li>CSE</li>
+        <li>IT</li>
+        <li>DS</li>
+      </ul>
+    </li>
+    <li>MBA</li>
+    <li>MCA</li>
+  </ul>
+</template>
+
+<!-- Academic -->
+<template id="academic">
+  <h2>Academic</h2>
+  <table border="1" cellpadding="5">
+    <tr>
+      <th>Dept Name</th>
+      <th>Head</th>
+      <th>Specialization</th>
+    </tr>
+    <tr>
+      <td>IT</td>
+      <td>Dr. Amit Jyoti</td>
+      <td>Cloud Computing, Cyber Security, AI</td>
+    </tr>
+    <tr>
+      <td>CSE</td>
+      <td>Prof. XYZ</td>
+      <td>Data Science, Machine Learning</td>
+    </tr>
+  </table>
+</template>
+
+<!-- Placement -->
+<template id="placement">
+  <h2>Placement</h2>
+  <h3>Top Recruiters</h3>
+  <table border="1" cellpadding="5">
+    <tr>
+      <th>S.No</th>
+      <th>Company Name</th>
+      <th>Students Selected</th>
+      <th>Package</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Infosys</td>
+      <td>55</td>
+      <td>6 LPA</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>TCS</td>
+      <td>40</td>
+      <td>5.5 LPA</td>
+    </tr>
+  </table>
+</template>
+
+<!-- Gallery -->
+<template id="gallery">
+  <h2>Gallery</h2>
+  <p>Images of College Activities:</p>
+  <img src="image1.jpg" width="200" height="150" alt="Activity 1">
+  <img src="image2.jpg" width="200" height="150" alt="Activity 2">
+  <img src="image3.jpg" width="200" height="150" alt="Activity 3">
+</template>
+
+<!-- Enquiry Form -->
+<template id="enquiry">
+  <h2>Enquiry Form</h2>
+  <form>
+    Name: <input type="text" name="name"><br><br>
+    Email: <input type="email" name="email"><br><br>
+    Phone: <input type="text" name="phone"><br><br>
+    Message: <textarea name="message"></textarea><br><br>
+    <input type="submit" value="Submit">
+  </form>
+</template>
+
+<!-- Registration Form -->
+<template id="registration">
+  <h2>Registration Form</h2>
+  <form>
+    Full Name: <input type="text" name="fullname"><br><br>
+    Email: <input type="email" name="email"><br><br>
+    Phone: <input type="text" name="phone"><br><br>
+    Course:
+    <select name="course">
+      <option>B.Tech CSE</option>
+      <option>B.Tech IT</option>
+      <option>B.Tech DS</option>
+      <option>MBA</option>
+      <option>MCA</option>
+    </select><br><br>
+    <input type="submit" value="Register">
+  </form>
+</template>
+
+<script>
+  // Load templates into iframe when links are clicked
+  document.querySelectorAll("a[target='contentFrame']").forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const id = link.getAttribute("href").replace(".html", "");
+      const content = document.getElementById(id).innerHTML;
+      const iframe = document.querySelector("iframe[name='contentFrame']");
+      iframe.srcdoc = content;
+    });
+  });
+</script>
+
+</body>
+</html>
